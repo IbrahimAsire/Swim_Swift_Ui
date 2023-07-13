@@ -30,6 +30,7 @@ struct ContentView: View {
                 Button("Tapped Here: \(tapCount)"){
                     self.tapCount += 1
                 }
+                .buttonStyle(.bordered).font(.headline)
                 
                 TextField("Type Any Thing: ", text: $name)
                 Text("Your Name is \(name)")
