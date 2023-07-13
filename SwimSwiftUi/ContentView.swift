@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var tapCount = 0
-    @State var name = ""
+    @State private var tapCount = 0
+    @State private var name = ""
 
     var body: some View {
         NavigationView {
