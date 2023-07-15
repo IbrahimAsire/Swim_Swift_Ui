@@ -14,11 +14,8 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section {
-                    Text("Hello, world!")
-                    Text("Hello, world!")
-                    Text("Hello, world!")
-                    
+                ForEach(0..<3){_ in
+                    Text("Hello, World!")
                 }
                 Section {
                     Text("Hello, world!")
