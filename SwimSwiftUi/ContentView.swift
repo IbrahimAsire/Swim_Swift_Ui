@@ -10,7 +10,10 @@ import SwiftUI
 struct ContentView: View {
     @State private var tapCount = 0
     @State private var name = ""
-
+    let students = ["Harry", "Hermione", "Ron"]
+    @State private var selectedStudent = "Harry"
+    
+    
     var body: some View {
         NavigationView {
             Form {
@@ -31,16 +34,23 @@ struct ContentView: View {
                 
                 TextField("Type Any Thing: ", text: $name)
                 Text("Your Name is \(name)")
+                
+                Picker("Select your student", selection: $selectedStudent) {
+                    ForEach(students, id: \.self) {
+                        Text($0)
+                    }
+                    
+                }
+                
+                .navigationTitle("Test")
+                .navigationBarTitleDisplayMode(.inline)
             }
-            
-            .navigationTitle("Test")
-            .navigationBarTitleDisplayMode(.inline)
         }
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
 }
