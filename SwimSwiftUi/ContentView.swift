@@ -11,7 +11,7 @@ struct ContentView: View {
     @State private var tapCount = 0
     @State private var name = ""
     let language = ["Swift", "Java", "Python"]
-    @State private var selectedStudent = "Harry"
+    @State private var selectedLanguage = "Harry"
     
     
     var body: some View {
@@ -35,7 +35,7 @@ struct ContentView: View {
                 TextField("Type Any Thing: ", text: $name)
                 Text("Your Name is \(name)")
                 
-                Picker("Select your student", selection: $selectedStudent) {
+                Picker("Select your language", selection: $selectedLanguage) {
                     ForEach(language, id: \.self) {
                         Text($0)
                     }
