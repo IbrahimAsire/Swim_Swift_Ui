@@ -11,7 +11,7 @@ struct ContentView: View {
     @State private var tapCount = 0
     @State private var name = ""
     let language = ["Swift", "Java", "Python"]
-    @State private var selectedLanguage = "Harry"
+    @State private var selectedLanguage = "Swift"
     
     
     var body: some View {
