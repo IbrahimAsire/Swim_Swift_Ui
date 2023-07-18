@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var tapCount = 0
     @State private var name = ""
-    let students = ["Harry", "Hermione", "Ron"]
+    let language = ["Swift", "Java", "Python"]
     @State private var selectedStudent = "Harry"
     
     
@@ -36,7 +36,7 @@ struct ContentView: View {
                 Text("Your Name is \(name)")
                 
                 Picker("Select your student", selection: $selectedStudent) {
-                    ForEach(students, id: \.self) {
+                    ForEach(language, id: \.self) {
                         Text($0)
                     }
                     
