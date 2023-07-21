@@ -21,14 +21,14 @@ struct ContentView: View {
                     Text("Hello, World!")
                 }
                 Section {
-                    Text("Hello, world!")
-                    Text("Hello, world!")
-                    Text("Hello, world!")
+                    Text("Hello, Ibrahim")
+                    Text("Hello, Asiri")
+                    Text("Hello, In SwiftUi")
                     
                 }
                 
                 Button("Tapped Here: \(tapCount) this's you number"){
-                    self.tapCount += 1
+                    self.tapCount += 2
                 }
                 .buttonStyle(.bordered).font(.headline)
                 
