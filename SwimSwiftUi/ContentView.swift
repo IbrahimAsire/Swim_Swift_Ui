@@ -11,6 +11,12 @@ struct ContentView: View {
     @State private var tapCount = 0
     @State private var name = ""
     let language = ["Swift", "Java", "Python"]
+
+    @State private var checkAmount = "0.0"
+    @State private var numberOfPeople = 2
+    @State private var tipPercentage = 20
+    let tipPercentages = [10, 15, 20, 25, 0]
+
     @State private var selectedLang = "Swift"
     
     
@@ -20,12 +26,7 @@ struct ContentView: View {
                 ForEach(0..<3){_ in
                     Text("Hello, World!")
                 }
-                Section {
-                    Text("Hello, Ibrahim")
-                    Text("Hello, Asiri")
-                    Text("Hello, In SwiftUi")
-                    
-                }
+                
                 
                 Button("Tapped Here: \(tapCount) this's you number"){
                     self.tapCount += 2
@@ -41,6 +42,10 @@ struct ContentView: View {
                     }
                     
                 }
+                Section {
+                    TextField("Amount", text: $checkAmount)
+                }
+                
                 
                 .navigationTitle("Test")
                 .navigationBarTitleDisplayMode(.inline)
