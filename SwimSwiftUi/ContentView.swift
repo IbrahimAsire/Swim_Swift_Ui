@@ -12,7 +12,7 @@ struct ContentView: View {
     @State private var name = ""
     let language = ["Swift", "Java", "Python"]
 
-    @State private var checkAmount = "0.0"
+    @State private var checkAmount = 0.0
     @State private var numberOfPeople = 2
     @State private var tipPercentage = 20
     let tipPercentages = [10, 15, 20, 25, 0]
@@ -43,7 +43,11 @@ struct ContentView: View {
                     
                 }
                 Section {
-                    TextField("Amount", text: $checkAmount)
+                    TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                        .keyboardType(.decimalPad)
+                }
+                Section {
+                    Text(checkAmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
                 }
                 
                 
