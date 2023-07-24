@@ -11,12 +11,12 @@ struct ContentView: View {
     @State private var tapCount = 0
     @State private var name = ""
     let language = ["Swift", "Java", "Python"]
-
+    
     @State private var checkAmount = 0.0
     @State private var numberOfPeople = 2
     @State private var tipPercentage = 20
     let tipPercentages = [10, 15, 20, 25, 0]
-
+    
     @State private var selectedLang = "Swift"
     
     
@@ -45,6 +45,13 @@ struct ContentView: View {
                 Section {
                     TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
                         .keyboardType(.decimalPad)
+                    
+                    Picker("Number of people", selection: $numberOfPeople) {
+                        ForEach(2 ..< 100) {
+                            Text("\($0) people")
+                        }
+                    }
+                    
                 }
                 Section {
                     Text(checkAmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
