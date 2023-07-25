@@ -43,7 +43,7 @@ struct ContentView: View {
                     
                 }
                 Section {
-                    TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                    TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                         .keyboardType(.decimalPad)
                     
                     Picker("Number of people", selection: $numberOfPeople) {
@@ -53,8 +53,17 @@ struct ContentView: View {
                     }
                     
                 }
+                
                 Section {
-                    Text(checkAmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                    Picker("Tip percentage", selection: $tipPercentage) {
+                        ForEach(tipPercentages, id: \.self) {
+                            Text($0, format: .percent)
+                        }
+                    }
+                }
+                
+                Section {
+                    Text(checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                 }
                 
                 
