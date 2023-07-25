@@ -60,6 +60,7 @@ struct ContentView: View {
                             Text($0, format: .percent)
                         }
                     }
+                    .pickerStyle(.segmented)
                 }
                 
                 Section {
