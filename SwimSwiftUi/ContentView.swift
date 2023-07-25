@@ -58,7 +58,7 @@ struct ContentView: View {
                 }
                 
                 
-                .navigationTitle("Test")
+                .navigationTitle("WeSplit")
                 .navigationBarTitleDisplayMode(.inline)
             }
         }
