@@ -46,7 +46,7 @@ struct ContentView: View {
                     TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                         .keyboardType(.decimalPad)
                     
-                    Picker("Number of people", selection: $numberOfPeople) {
+                    Picker("Number of Naaaaas", selection: $numberOfPeople) {
                         ForEach(2 ..< 100) {
                             Text("\($0) people")
                         }
@@ -68,7 +68,7 @@ struct ContentView: View {
                 }
                 
                 
-                .navigationTitle("WeSplit")
+                .navigationTitle("We-Split")
                 .navigationBarTitleDisplayMode(.inline)
             }
         }
