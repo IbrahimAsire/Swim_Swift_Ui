@@ -19,6 +19,10 @@ struct ContentView: View {
     
     @State private var selectedLang = "Swift"
     
+    var totalPerPerson: Double {
+        
+        return 0
+    }
     
     var body: some View {
         NavigationView {
