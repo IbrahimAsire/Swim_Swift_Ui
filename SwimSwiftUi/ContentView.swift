@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let backgroundGradient = LinearGradient(colors: [Color.red, Color.blue],
+        startPoint: .top, endPoint: .bottom)
+    
     @State private var tapCount = 0
     @State private var name = ""
     let language = ["Swift", "Java", "Python"]
@@ -78,6 +82,7 @@ struct ContentView: View {
                 .navigationBarTitleDisplayMode(.inline)
             }
         }
+        .background(backgroundGradient)
     }
     
     struct ContentView_Previews: PreviewProvider {
