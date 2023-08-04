@@ -20,6 +20,7 @@ struct ContentView: View {
     
     @State private var selectedLang = "Swift"
     
+    // For calculate the total per person
     var totalPerPerson: Double {
         let peopleCount = Double(numberOfPeople + 2)
         let tipSelection = Double(tipPercentage)
@@ -44,7 +45,7 @@ struct ContentView: View {
                     self.tapCount += 2
                 }
                 .buttonStyle(.bordered).font(.headline)
-                TextField("Type Any Thing: ", text: $name)
+                TextField("Type Your Name Please: ", text: $name)
                 Text("Your Name is \(name)")
                 
                 Picker("Select your language", selection: $selectedLang) {
