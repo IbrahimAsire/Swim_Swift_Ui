@@ -21,8 +21,15 @@ struct ContentView: View {
     @State private var selectedLang = "Swift"
     
     var totalPerPerson: Double {
+        let peopleCount = Double(numberOfPeople + 2)
+        let tipSelection = Double(tipPercentage)
         
-        return 0
+        let tipValue = checkAmount / 100 * tipSelection
+        let grandTotal = checkAmount + tipValue
+        let amountPerPerson = grandTotal / peopleCount
+        
+        return amountPerPerson
+        
     }
     
     var body: some View {
@@ -37,7 +44,6 @@ struct ContentView: View {
                     self.tapCount += 2
                 }
                 .buttonStyle(.bordered).font(.headline)
-                
                 TextField("Type Any Thing: ", text: $name)
                 Text("Your Name is \(name)")
                 
