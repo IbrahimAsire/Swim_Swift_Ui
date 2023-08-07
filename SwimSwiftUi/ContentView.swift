@@ -65,7 +65,6 @@ struct ContentView: View {
                     }
                     
                 }
-                
                 Section {
                     Picker("Tip percentage", selection: $tipPercentage) {
                         ForEach(tipPercentages, id: \.self) {
