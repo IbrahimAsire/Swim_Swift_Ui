@@ -46,7 +46,7 @@ struct ContentView: View {
                 }
                 .buttonStyle(.bordered).font(.headline)
                 TextField("Type Your Name Please: ", text: $name)
-                Text("Your Name is \(name)")
+                Text("Your Name is \(name) + your nmber is \(tapCount)")
                 
                 Picker("Select your language", selection: $selectedLang) {
                     ForEach(language, id: \.self) {
@@ -59,7 +59,7 @@ struct ContentView: View {
                         .keyboardType(.decimalPad)
                     
                     Picker("Number of Naaaaas", selection: $numberOfPeople) {
-                        ForEach(2 ..< 100) {
+                        ForEach(2 ..< 101) {
                             Text("\($0) people")
                         }
                     }
