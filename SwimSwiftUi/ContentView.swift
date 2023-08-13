@@ -36,10 +36,11 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             Form {
-                ForEach(0..<3){_ in
-                    Text("Hello, World!")
+                VStack{
+                    ForEach(0..<3){_ in
+                        Text("Hello, World!")
+                    }
                 }
-                
                 
                 Button("Tapped Here: \(tapCount) this's you number"){
                     self.tapCount += 2
