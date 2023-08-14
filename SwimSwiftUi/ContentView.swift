@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-        
+    
     @State private var tapCount = 0
     @State private var name = ""
     let language = ["Swift", "Java", "Python"]
@@ -40,12 +40,14 @@ struct ContentView: View {
                     ForEach(0..<3){_ in
                         Text("Hello, World!")
                     }
-                }
+                    
+                    
+                    Button("Tapped Here: \(tapCount) this's you number"){
+                        self.tapCount += 2
+                    }
+                    .buttonStyle(.bordered).font(.headline)
+                }// end of vstack 
                 
-                Button("Tapped Here: \(tapCount) this's you number"){
-                    self.tapCount += 2
-                }
-                .buttonStyle(.bordered).font(.headline)
                 TextField("Type Your Name Please: ", text: $name)
                 Text("Your Name is \(name) + your nmber is \(tapCount)")
                 
@@ -86,7 +88,7 @@ struct ContentView: View {
                 
                 .navigationTitle("We-Split")
                 .navigationBarTitleDisplayMode(.inline)
-
+                
             }
         }
     }
