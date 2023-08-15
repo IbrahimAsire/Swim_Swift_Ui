@@ -37,16 +37,18 @@ struct ContentView: View {
         NavigationView {
             Form {
                 VStack{
-                    ForEach(0..<3){_ in
-                        Text("Hello, World!")
-                    }
+                    HStack{
+                        ForEach(0..<3){_ in
+                            Text("Hello, World!")
+                        }
+                    }// end of Hstack
                     
                     
                     Button("Tapped Here: \(tapCount) this's you number"){
                         self.tapCount += 2
                     }
                     .buttonStyle(.bordered).font(.headline)
-                }// end of vstack 
+                }// end of vstack
                 
                 TextField("Type Your Name Please: ", text: $name)
                 Text("Your Name is \(name) + your nmber is \(tapCount)")
