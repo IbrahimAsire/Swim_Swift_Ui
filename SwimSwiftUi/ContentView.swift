@@ -48,6 +48,7 @@ struct ContentView: View {
                         self.tapCount += 2
                     }
                     .buttonStyle(.bordered).font(.headline)
+                    Spacer()
                 }// end of vstack
                 
                 TextField("Type Your Name Please: ", text: $name)
