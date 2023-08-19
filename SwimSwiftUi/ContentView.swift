@@ -34,8 +34,24 @@ struct ContentView: View {
     }
     
     var body: some View {
+        
+        
         NavigationView {
             Form {
+                
+                ZStack {
+                    VStack(spacing: 0) {
+                        Color.green
+                        Color.blue
+                    }
+
+                    Text("Hola, I just try...")
+                        .foregroundColor(.secondary)
+                        .padding(50)
+                        .background(.ultraThinMaterial)
+                }
+                .ignoresSafeArea()
+
                 VStack{
                     HStack{
                         ForEach(0..<3){_ in
@@ -88,24 +104,12 @@ struct ContentView: View {
                     Text("Amount per person")
                 }
                 
-                ZStack {
-                    VStack(spacing: 0) {
-                        Color.red
-                        Color.blue
-                    }
-
-                    Text("Your content")
-                        .foregroundColor(.secondary)
-                        .padding(50)
-                        .background(.ultraThinMaterial)
-                }
-                .ignoresSafeArea()
-                
-                
                 .navigationTitle("We-Split")
                 .navigationBarTitleDisplayMode(.inline)
                 
             }
+            
+            
         }
     }
     
