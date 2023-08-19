@@ -88,6 +88,19 @@ struct ContentView: View {
                     Text("Amount per person")
                 }
                 
+                ZStack {
+                    VStack(spacing: 0) {
+                        Color.red
+                        Color.blue
+                    }
+
+                    Text("Your content")
+                        .foregroundColor(.secondary)
+                        .padding(50)
+                        .background(.ultraThinMaterial)
+                }
+                .ignoresSafeArea()
+                
                 
                 .navigationTitle("We-Split")
                 .navigationBarTitleDisplayMode(.inline)
