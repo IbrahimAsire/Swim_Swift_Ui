@@ -9,6 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     
+    let myaName = """
+ Today my name is Ibrahim, also i wake up early but I out of my house late,
+ then I faced a lot of traffic along way to work, I turn to Arqa and was the traffic is lessest
+ , I want, need and hope to be incredible man ... now at 5.48Pm Monday I feel nauseous, I think the one next to me is kreeh, I think the one who was responsible for collection projects is sick ...
+ I went today to Doctor and he said to me you have a bug problem in your health.
+ Today is Wednesday 6-Sep-23 I feel a strange feeling ..
+
+ """
+    
     @State private var tapCount = 0
     @State private var name = ""
     let language = ["Swift", "Java", "Python"]
@@ -35,7 +44,7 @@ struct ContentView: View {
     
     var body: some View {
         
-        
+
         NavigationView {
             Form {
                 
@@ -44,7 +53,7 @@ struct ContentView: View {
                         Color.green
                         Color.blue
                     }
-
+                    
                     Text("Hola, I just try...")
                         .foregroundColor(.secondary)
                         .padding(50)
@@ -63,7 +72,9 @@ struct ContentView: View {
                     Button("Tapped Here: \(tapCount) this's you number"){
                         self.tapCount += 2
                     }
-                    .buttonStyle(.bordered).font(.headline)
+                    .background(.red)
+                    .frame(width: 200, height: 200)
+                    .buttonStyle(.bordered).font(.headline).foregroundColor(.white)
                     Spacer()
                 }// end of vstack
                 
