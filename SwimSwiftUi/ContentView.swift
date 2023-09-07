@@ -73,7 +73,7 @@ struct ContentView: View {
                         self.tapCount += 2
                     }
                     .background(.red)
-                    .frame(width: 200, height: 200)
+                    .frame(width: 230, height: 80)
                     .buttonStyle(.bordered).font(.headline).foregroundColor(.white)
                     Spacer()
                 }// end of vstack
