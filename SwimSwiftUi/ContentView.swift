@@ -9,6 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     
+    var nameToPractive = """
+hi this is ibrahim Asiri from StarBucks on Riyadh bolevard at Friday 8-Sep, I keep it as smallsenn ...
+did you it ?
+"""
+    
     @State private var useRedText = false
 
     @State private var tapCount = 0
@@ -60,6 +65,7 @@ struct ContentView: View {
                             Text("Hello, World!")
                         }
                     }// end of Hstack
+                    .font(.title)
                     
                     
                     Button("Tapped Here: \(tapCount) this's you number"){
