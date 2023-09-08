@@ -70,6 +70,9 @@ struct ContentView: View {
                     }
                     .background(.red)
                     .frame(width: 230, height: 80)
+                    
+                    .foregroundColor(useRedText ? .white : .blue)
+                    
                     .buttonStyle(.bordered).font(.headline).foregroundColor(.white)
                     Spacer()
                 }// end of vstack
