@@ -1,14 +1,11 @@
-//
-//  ContentView.swift
-//  SwimSwiftUi
-//
-//  Created by ibrahim asiri on 19/12/1444 AH.
-//
 
 import SwiftUI
 
 struct ContentView: View {
 
+    let anyThingToWriting = """
+
+"""
     
     @State private var useRedText = false
 
@@ -72,7 +69,7 @@ struct ContentView: View {
                     }
                     .background(.red)
                     .frame(width: 230, height: 80)
-                    
+                                        
                     .foregroundColor(useRedText ? .white : .blue)
                     
                     .buttonStyle(.bordered).font(.headline).foregroundColor(.white)
